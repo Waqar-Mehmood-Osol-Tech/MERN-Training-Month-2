@@ -13,6 +13,7 @@ function App() {
 
   // Function for password generator
   const passwordGenerator = useCallback(() => {
+    console.log("calling")
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -35,7 +36,7 @@ function App() {
 
   useEffect(() => {
     passwordGenerator()
-  }, [length, numberAllowed, charAllowed, passwordGenerator])
+  }, [])
 
   return (
     <>
